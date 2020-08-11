@@ -25,9 +25,9 @@ private:
 	std::weak_ptr<HttpData> holder_;	// 虚指针
 
 private:
-	int parse_URI();
-	int parse_Headers();
-	int analysisRequest();
+//	int parse_URI();
+//	int parse_Headers();
+//	int analysisRequest();
 
 // 各回调函数机制
 	CallBack readHandler_;
