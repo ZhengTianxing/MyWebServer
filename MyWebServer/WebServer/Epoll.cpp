@@ -18,6 +18,8 @@ const int EPOLLWAIT_TIME = 10000;
 
 typedef shared_ptr<Channel> SP_Channel;
 
+//epoll_create1(int flags) flag可以设置为0或者EPOLL_CLOEXE
+//C ，为零时表现和epoll_create()表现一致，EPOLL_CLOEXEC表示进程被替换时会关闭文件描述符
 Epoll::Epoll()
 : epollFd_(epoll_create1(EPOLL_CLOEXEC)),
 events_(EVENTSNUM)
